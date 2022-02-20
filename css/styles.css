@@ -7,6 +7,7 @@
   --third-color-text:#ffffff;
   --second-background-color:#2F303A;
   --third-background-color:#F5F4FA;
+  --icon-colors:#AFB1B8;
 
 }
 
@@ -84,10 +85,16 @@ address {
   margin-right: 50px;
 }
 .mail{
-  margin-right: 50px;
-
+ margin-right: 50px;
 }
-
+.nav-link-cont{
+  display: flex;
+  align-items: center;
+}
+.mail-tel-svg{
+  margin-right: 10px;
+  fill:var(--second-color-text);
+}
 
 .second-color-logo{
   color: var(--accent-color);
@@ -118,17 +125,28 @@ address {
   color: var(--second-color-text);
 }
 .nav-contact:hover,
-.nav-contact:focus{
+.nav-contact:focus,
+.mail-tel-svg:hover,
+.mail-tel-svg:focus{
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* Main styles */
 /* Hero section */
 .hero-section{
-  background-color: var(--second-background-color);
+  background-image: linear-gradient(
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
+  background-size: cover;
+  max-width: 1600px;
+  background-color: #C4C4C4;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* .hero-section .container{
   padding-top: 200px;
@@ -190,6 +208,19 @@ address {
   margin-top: 30px;
   margin-left: 30px;
   flex-basis: calc((100% - 120px) / 4);
+}
+.icon-firs-section{
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: var(--third-background-color);
+}
+.our-icons{
+  width: 70px;
+  height: 70px;
 }
 
 /* .list-first-section:not(:last-child){
@@ -260,6 +291,7 @@ address {
   text-align: center;
   letter-spacing: 0.03em;
   color:var(--second-color-text);
+  margin-bottom: 16px;
 }
 .card-member{
   background-color:#ffffff;
@@ -268,15 +300,74 @@ address {
   margin-top: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-
+  
 }
 .members-of-team{
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px 30px 32px;
+
 }
-/* .picture-member{
-  margin-bottom: 30px;
+.social{
+  display: flex;
+  justify-content: space-between;
+}
+.svg-links{
+  fill: var(--icon-colors);
+}
+.social-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;                 
+  border-radius: 50%;
+  }
+
+  .social-links:hover .svg-links,
+  .social-links:focus .svg-links{
+    fill: var(--third-color-text);
+  }
+  .social-links:hover,
+  .social-links:focus{
+    background-color: var(--accent-color);
+  }
+/* our clients */
+.clients-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;    
+  border: 1px solid;             
+  border-radius: 4px;
+  color: var(--icon-colors);
+}
+.icon-clients{
+  fill: var(--icon-colors);
+}
+.clients-link:hover .icon-clients,
+.clients-link:focus .icon-clients{
+  fill: var(--accent-color);
+  }
+.clients-link:focus,
+.clients-link:hover{
+  border-color: var(--accent-color);
+} 
+.list-clients{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+} 
+.clients{
+  flex-basis: calc((100% - 1020px) / 6);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+/* .list-clients .clients:not(:last-child){
+  margin-right: 30px;
 } */
+
+
 /* footer styles */
 .footer{
   background-color: var(--second-background-color);
@@ -321,10 +412,45 @@ address {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--third-color-text);
   display: block;
   margin-bottom: 20px;
 }
+.foot-header{
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--third-color-text);
+}
+.foot-links{
+  padding-top: 12px;
+}
+.foot-links .svg-links{
+  fill:var(--third-color-text)
+}
+.foot-links .social-links{
+  background-color: rgba(255, 255, 255, 10%);
+ 
+}
+.foot-links .list-links:not(:last-child){
+  margin-right: 10px;
+}
+.foot-links .social-links:hover,
+.foot-links .social-links:focus{
+  background-color: var(--accent-color);
+}
+.div-foot{
+  display: flex;
+}
+.div-address{
+  margin-right: 70px;
+}
+
+
+
 /* Styles Porfolio */
 /* styles list of bottons */
 .list-buttons{
@@ -402,5 +528,6 @@ min-width: 130px;
   letter-spacing: 0.03em;
   color: var(--second-color-text);
 }
+
 
 
