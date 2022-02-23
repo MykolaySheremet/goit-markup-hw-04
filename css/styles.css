@@ -92,6 +92,7 @@ address {
   align-items: center;
 }
 .mail-tel-svg{
+  
   margin-right: 10px;
   fill:var(--second-color-text);
 }
@@ -118,19 +119,29 @@ address {
   color: var(--accent-color);
 }
 .nav-contact{
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14
   letter-spacing: 0.02em;
   color: var(--second-color-text);
 }
-.nav-contact:hover,
+.nav-contact:hover{
+  color: var(--accent-color);
+}
+.nav-contact:hover .mail-tel-svg{
+  fill: var(--accent-color);
+}
+
+
+/* .nav-contact:hover,
 .nav-contact:focus,
 .mail-tel-svg:hover,
 .mail-tel-svg:focus{
   color: var(--accent-color);
   fill: var(--accent-color);
-}
+} */
 
 /* Main styles */
 /* Hero section */
