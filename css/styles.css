@@ -223,8 +223,10 @@ address {
 .icon-firs-section{
   display: flex;
   justify-content: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  align-items: center;
+  height: 120px ;
+  /* padding-top: 25px;
+  padding-bottom: 25px;  иправил замечания ментора - убрать падинги- задать висоту - и отцентрировать флексами*/
   margin-bottom: 30px;
   border-radius: 4px;
   background-color: var(--third-background-color);
